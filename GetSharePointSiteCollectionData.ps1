@@ -74,7 +74,7 @@ function SubSites{
 
         $output = Invoke-PnPSPRestMethod -Url "/_api/web/getFolderByServerRelativeUrl('$serverrelativeurl')?`$select=StorageMetrics&`$expand=StorageMetrics"
 
-        $StorageMetrics = ($Output.TotalSize/1024)
+        $StorageMetrics = ($Output.TotalSize/1024/1024)
 
         $subsite = $True
 
